@@ -17,6 +17,22 @@ namespace Bufe_20250213
         public MySqlDataReader Dr { get => dr; set => dr = value; }
     
     
+        public Adatbazis(string sql)
+        {
+            kapcsolat = new MySqlConnection(szerver);
+            kapcsolat.Open();
+            parancs = new MySqlCommand(sql, kapcsolat);
+            dr  = parancs.ExecuteReader();
+        }
 
+        public void lezaras()
+        {
+            kapcsolat.Close();
+        }
+
+        ~Adatbazis()
+        {
+            kapcsolat.Close();
+        }
     }
 }
