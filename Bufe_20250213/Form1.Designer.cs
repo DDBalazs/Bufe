@@ -97,6 +97,7 @@
             this.dgadatok.Name = "dgadatok";
             this.dgadatok.Size = new System.Drawing.Size(755, 436);
             this.dgadatok.TabIndex = 2;
+            this.dgadatok.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgadatok_CellClick);
             // 
             // sorszam
             // 
@@ -267,6 +268,7 @@
             this.btsave.TabIndex = 8;
             this.btsave.Text = "Mentés";
             this.btsave.UseVisualStyleBackColor = true;
+            this.btsave.Click += new System.EventHandler(this.btsave_Click);
             // 
             // lbfizetendo
             // 

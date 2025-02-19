@@ -9,7 +9,7 @@ namespace Bufe_20250213
 {
     internal class Adatbazis
     {
-        const string szerver = "server=linsql.verebely.dc;uid=diak57;password=HXPEFG,database=diak57";
+        const string szerver = "server=localhost;uid=root;database=bufe;password=";
         MySqlConnection kapcsolat;
         MySqlCommand parancs;
         MySqlDataReader dr;
